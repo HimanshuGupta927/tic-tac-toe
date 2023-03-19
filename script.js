@@ -95,7 +95,7 @@ function updateBox(e) {
         currentPlayer === 'X' ? e.target.classList.add('green') : e.target.classList.add('red');
         changePlayer();
         info.innerHTML = `${currentPlayer}'s Turn!`
-        if(counter > 5){
+        if(counter > 4){
             checkWin();
         }
     }
