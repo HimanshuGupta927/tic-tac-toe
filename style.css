@@ -1,0 +1,134 @@
+:root{
+    --base-color: #ffea00;
+    --font: 'Edu NSW ACT Foundation', cursive;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+body::before{
+    content: "";
+    background-image: url('./img/Simple\ Shiny.svg');
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+}
+
+.heading{
+    font-size: 100px;
+}
+
+.info{
+    font-size: 60px;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    font-size: 80px;
+}
+
+.box{
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box:hover{
+    background-color: rgb(32 48 96);
+    cursor: pointer;
+}
+
+.box:nth-child(1),
+.box:nth-child(4),
+.box:nth-child(7){
+    border-right: 6px solid var(--base-color) 
+}
+
+.box:nth-last-child(1),
+.box:nth-last-child(4),
+.box:nth-last-child(7){
+    border-left: 6px solid var(--base-color); 
+}
+
+
+.box:nth-child(1),
+.box:nth-child(2),
+.box:nth-child(3){
+    border-bottom: 6px solid var(--base-color);
+}
+
+.box:nth-last-child(1),
+.box:nth-last-child(2),
+.box:nth-last-child(3){
+    border-top: 6px solid var(--base-color);
+}
+
+.result{
+    height: 200px;
+}
+
+.winner{
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn{
+    height: 60px;
+    width: 200px;
+    font-size: 30px;
+    margin: 20px;
+    border-radius: 60px;
+    border: 2px solid rgb(255, 0, 0);;
+    cursor: pointer;
+    background-color: var(--base-color);
+    transition: box-shadow 0.5s;
+}
+
+.btn:hover{
+    box-shadow: 0px 0px 10px rgb(255, 0, 0), 0px 0px 20px rgb(255, 0, 0), 0px 0px 30px rgb(255, 0, 0);
+}
+
+.green{
+    color: rgb(111, 255, 0);
+}
+
+.red{
+    color: rgb(255, 0, 0);
+}
+
+.yellow{
+    color: var(--base-color);
+}
+
+.line{
+    width: 6px;
+    height: 450px;
+    background-color: #ffea00;
+    position: absolute;
+}
+
+.hidden{
+    display: none;
+}
